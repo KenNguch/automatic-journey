@@ -19,18 +19,27 @@ const clock = () => {
         clock();
     }, 1000);
 
-    //   Good Morning and Good Night Conditions
     var greeting
-    if (hours < 12) {
 
-        greeting = "Good Morning " + name + " Hurry Up!";
+    if (hours < 8) {
+        greeting = "Good Morning " + name + " Time to go to work!";
+    }
+    if (hours >= 8 && hours < 12) {
+        greeting = "Good Morning " + name + " Have a great day";
     }
 
-    if (hours >= 12 && hours <= 18) {
-        greeting = "Good Afternoon " + name;
+    if (hours >= 12 && hours < 14) {
+        greeting = "Good Afternoon " + name + " I hope you are off to lunch";
+    }
+    if (hours >= 14 && hours < 17) {
+        greeting = "Good Afternoon " + name + " I hope your lunch was great";
     }
 
-    if (hours >= 18 && hours <= 24) {
+    if (hours >= 17 && hours < 19) {
+        greeting = "Good Evening " + name;
+    }
+
+    if (hours >= 19 && hours <= 24) {
         greeting = "Good Evening " + name;
     }
 
