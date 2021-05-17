@@ -28,10 +28,10 @@ const clock = () => {
         greeting = "Good Morning " + name + " Have a great day";
     }
 
-    if (hours >= 12 && hours <= 14) {
+    if (hours >= 12 && hours < 14) {
         greeting = "Good Afternoon " + name + " I hope you are off to lunch";
     }
-    if (hours > 14 && hours < 17) {
+    if (hours >= 14 && hours < 17) {
         greeting = "Good Afternoon " + name + " I hope your lunch was great";
     }
 
