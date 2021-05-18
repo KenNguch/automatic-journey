@@ -1,10 +1,31 @@
-var count = prompt("Enter A Number to use in the loop", 0);
+var count = prompt("Enter A Number Less than 100 to use in the loop", 0);
 
-document.write("Loop Started");
-
-while (count < 10) {
-    document.getElementById("greetings").innerHTML = "Current Count is : " + count + "<br />";
-    count++;
+function error() {
+    alert("Wrong inputs");
+    return false;
 
 }
-document.write("The End")
+
+function sucess() {
+    document.getElementById("greetings").innerHTML = "Loop Started <br>"
+
+
+    while (count <= 100) {
+
+        document.getElementById("greetings").append("Current Count is : " + count);
+        // document.getElementById("greetings").appendChild("br");
+
+        count++;
+
+    }
+    document.getElementById("greetings").append("Loop Ended");
+
+}
+
+
+count < 0 || count > 100 || isNaN(count) ? error() : sucess();
+
+
+
+
+
